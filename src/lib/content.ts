@@ -12,13 +12,13 @@ export const SITE = {
   url: "https://sreeambaals-padalur.vercel.app",
   logo: "/logo.jpg",
   email: "sreeambaalsschool@gmail.com",
-  phone: "+91 95007 77333",
-  address: "Sree Ambaals Matric HR. Sec. School, Padalur, Lalgudi Taluk, Trichy District, Tamil Nadu — 621 715",
+  phone: "+91 96550 09894",
+  address: "Linga Bairavi Avenue, National Highway 45, Main Road, Padalur (PO), Perambalur — 621109, Tamil Nadu",
   social: {
     instagram: "https://instagram.com/sreeambaals",
     youtube: "https://youtube.com/@sreeambaals",
     facebook: "https://facebook.com/sreeambaals",
-    whatsapp: "https://wa.me/919500777333",
+    whatsapp: "https://wa.me/919655009894",
   },
   keywords: [
     "Sree Ambaals Matric School Padalur",
@@ -35,9 +35,42 @@ export const NAV = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Events", href: "/events" },
+  { label: "Campus Life", href: "/campus-life" },
   { label: "Gallery", href: "/gallery" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+] as const;
+
+export const CAMPUS_LIFE = [
+  {
+    title: "Smart Classrooms",
+    desc: "Spacious, ventilated classrooms with digital teaching aids that make lessons interactive and engaging.",
+    image: "/uploads/photo_15.jpg",
+  },
+  {
+    title: "Science & Computer Labs",
+    desc: "Well-equipped labs for physics, chemistry, biology, and computer science with hands-on experiments and projects.",
+    image: "/uploads/photo_03.jpg",
+  },
+  {
+    title: "Library",
+    desc: "A growing collection of academic books, reference materials, periodicals, and storybooks to encourage reading.",
+    image: "/uploads/photo_04.jpg",
+  },
+  {
+    title: "Sports Ground",
+    desc: "Outdoor and indoor sports facilities for athletics, cricket, volleyball, badminton, and other games.",
+    image: "/uploads/photo_05.jpg",
+  },
+  {
+    title: "Hostel",
+    desc: "Safe and comfortable boarding facilities with supervised study hours, nutritious food, and caring wardens.",
+    image: "/uploads/photo_09.jpg",
+  },
+  {
+    title: "Yoga & Wellness",
+    desc: "Regular yoga sessions and wellness programs to keep students physically fit and mentally focused.",
+    image: "/uploads/photo_01.jpg",
+  },
 ] as const;
 
 export const HERO = {
