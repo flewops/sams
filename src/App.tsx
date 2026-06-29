@@ -8,6 +8,7 @@ import { About } from "./pages/About";
 import { Events } from "./pages/Events";
 import { EventDetail } from "./pages/EventDetail";
 import { CampusLife } from "./pages/CampusLife";
+import { CampusLifeDetail } from "./pages/CampusLifeDetail";
 import { GalleryPage } from "./pages/GalleryPage";
 import { Contact } from "./pages/Contact";
 import { Blog } from "./pages/Blog";
@@ -38,6 +39,7 @@ function AppRoutes() {
         <Route path="/events" element={<AnimatedPage><Events /></AnimatedPage>} />
         <Route path="/events/:id" element={<AnimatedPage><EventDetail /></AnimatedPage>} />
         <Route path="/campus-life" element={<AnimatedPage><CampusLife /></AnimatedPage>} />
+        <Route path="/campus-life/:slug" element={<AnimatedPage><CampusLifeDetail /></AnimatedPage>} />
         <Route path="/gallery" element={<AnimatedPage><GalleryPage /></AnimatedPage>} />
         <Route path="/contact" element={<AnimatedPage><Contact /></AnimatedPage>} />
         <Route path="/blog" element={<AnimatedPage><Blog /></AnimatedPage>} />

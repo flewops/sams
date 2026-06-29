@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { SEOHead } from "../components/SEOHead";
 import { PageHeader } from "../components/PageHeader";
 import { CAMPUS_LIFE, SITE } from "../lib/content";
@@ -22,30 +24,37 @@ export function CampusLife() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {CAMPUS_LIFE.map((item, i) => (
                 <motion.div
-                  key={item.title}
+                  key={item.slug}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group rounded-[2rem] bg-cream border-2 border-gray-900 overflow-hidden shadow-[6px_6px_0px_0px_rgba(31,41,55,0.08)] hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(245,124,0,0.2)] transition-all"
                 >
-                  <div className="relative h-56 overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform">
-                      <h2 className="text-xl font-bold text-white mb-1">{item.title}</h2>
-                      <p className="text-sm text-white/90 opacity-0 group-hover:opacity-100 transition-opacity delay-75 line-clamp-3">
-                        {item.desc}
-                      </p>
+                  <Link
+                    to={`/campus-life/${item.slug}`}
+                    className="group block rounded-[2rem] bg-cream border-2 border-gray-900 overflow-hidden shadow-[6px_6px_0px_0px_rgba(31,41,55,0.08)] hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(245,124,0,0.2)] transition-all"
+                  >
+                    <div className="relative h-56 overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 transition-transform">
+                        <h2 className="text-xl font-bold text-white mb-1">{item.title}</h2>
+                        <p className="text-sm text-white/90 opacity-0 group-hover:opacity-100 transition-opacity delay-75 line-clamp-3">
+                          {item.shortDesc}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-5 md:hidden">
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
-                  </div>
+                    <div className="p-5 flex items-center justify-between">
+                      <span className="text-sm font-bold text-school-orange group-hover:text-school-blue transition-colors">
+                        Explore
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-school-orange group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
                 </motion.div>
               ))}
             </div>

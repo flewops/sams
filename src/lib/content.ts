@@ -42,34 +42,109 @@ export const NAV = [
 
 export const CAMPUS_LIFE = [
   {
+    slug: "smart-classrooms",
     title: "Smart Classrooms",
-    desc: "Spacious, ventilated classrooms with digital teaching aids that make lessons interactive and engaging.",
+    shortDesc: "Spacious, ventilated classrooms with digital teaching aids that make lessons interactive and engaging.",
+    description:
+      "Our smart classrooms are designed to make learning active, visual, and memorable. Each room is spacious, well-ventilated, and equipped with digital boards and projectors that bring lessons to life. Teachers use multimedia content, animations, and interactive exercises to explain concepts clearly, while students participate through discussions, group work, and hands-on activities. The environment encourages curiosity, concentration, and collaboration.",
     image: "/uploads/photo_15.jpg",
+    gallery: ["/uploads/photo_15.jpg", "/uploads/photo_03.jpg", "/uploads/photo_04.jpg"],
+    highlights: [
+      "Digital boards and projectors in every classroom",
+      "Spacious, well-lit, and ventilated learning spaces",
+      "Interactive teaching methods and group activities",
+      "Comfortable seating arranged for collaboration",
+    ],
   },
   {
-    title: "Science & Computer Labs",
-    desc: "Well-equipped labs for physics, chemistry, biology, and computer science with hands-on experiments and projects.",
-    image: "/uploads/photo_03.jpg",
-  },
-  {
-    title: "Library",
-    desc: "A growing collection of academic books, reference materials, periodicals, and storybooks to encourage reading.",
-    image: "/uploads/photo_04.jpg",
-  },
-  {
-    title: "Sports Ground",
-    desc: "Outdoor and indoor sports facilities for athletics, cricket, volleyball, badminton, and other games.",
+    slug: "sports-ground",
+    title: "Sports Ground & Achievements",
+    shortDesc: "Outdoor and indoor sports facilities for athletics, cricket, volleyball, badminton, and other games.",
+    description:
+      "Sports are an essential part of life at Sree Ambaals. Our large sports ground supports athletics, cricket, volleyball, badminton, kabaddi, and more. Indoor facilities allow students to practice during all seasons. Beyond physical fitness, our sports program builds discipline, teamwork, leadership, and resilience. Students regularly participate in inter-school and district-level competitions, bringing home trophies and recognition.",
     image: "/uploads/photo_05.jpg",
+    gallery: ["/uploads/photo_05.jpg", "/uploads/photo_06.jpg", "/uploads/photo_01.jpg"],
+    highlights: [
+      "Cricket, volleyball, badminton, kabaddi, and athletics",
+      "Indoor games for year-round practice",
+      "Regular inter-school and district tournaments",
+      "Trained physical education instructors",
+    ],
   },
   {
+    slug: "science-computer-labs",
+    title: "Science & Computer Labs",
+    shortDesc: "Well-equipped Physics, Chemistry, and Computer labs for hands-on experiments and projects.",
+    description:
+      "Our science and computer laboratories give students the chance to learn by doing. The Physics lab helps students understand concepts through experiments and models. The Chemistry lab is equipped with modern apparatus and safety measures for practical sessions. The Computer lab introduces students to coding, digital tools, and project work, preparing them for a technology-driven world.",
+    image: "/uploads/photo_03.jpg",
+    gallery: ["/uploads/photo_03.jpg", "/uploads/photo_04.jpg", "/uploads/photo_02.jpg"],
+    highlights: [
+      "Physics lab with experiments, models, and demonstrations",
+      "Chemistry lab with modern equipment and safety standards",
+      "Computer lab for coding, digital learning, and projects",
+      "Hands-on practical sessions for all higher-secondary students",
+    ],
+  },
+  {
+    slug: "library",
+    title: "Library",
+    shortDesc: "A growing collection of academic books, reference materials, periodicals, and storybooks.",
+    description:
+      "The Sree Ambaals library is a quiet, welcoming space that encourages reading and independent learning. It houses academic textbooks, reference materials, competitive exam guides, newspapers, magazines, and a rich collection of Tamil and English storybooks. Students are encouraged to borrow books, participate in reading programs, and develop a lifelong love for reading.",
+    image: "/uploads/photo_04.jpg",
+    gallery: ["/uploads/photo_04.jpg", "/uploads/photo_15.jpg", "/uploads/photo_03.jpg"],
+    highlights: [
+      "Wide range of academic and reference books",
+      "Tamil and English storybooks for all age groups",
+      "Newspapers, magazines, and competitive exam guides",
+      "Quiet reading environment with borrowing facility",
+    ],
+  },
+  {
+    slug: "hostel",
     title: "Hostel",
-    desc: "Safe and comfortable boarding facilities with supervised study hours, nutritious food, and caring wardens.",
+    shortDesc: "Safe and comfortable boarding facilities with supervised study hours and caring wardens.",
+    description:
+      "Our hostel provides a secure, disciplined, and caring home away from home. Rooms are clean and comfortable, with separate facilities for boys and girls. Wardens and staff supervise study hours, ensure nutritious meals, and support students' emotional well-being. The hostel routine balances academics, recreation, rest, and personal responsibility, helping students grow into independent individuals.",
     image: "/uploads/photo_09.jpg",
+    gallery: ["/uploads/photo_09.jpg", "/uploads/photo_12.jpg", "/uploads/photo_15.jpg"],
+    highlights: [
+      "Separate, secure hostel blocks for boys and girls",
+      "Supervised study hours and nutritious meals",
+      "Caring wardens and round-the-clock support",
+      "Balanced routine of study, play, and rest",
+    ],
   },
   {
-    title: "Yoga & Wellness",
-    desc: "Regular yoga sessions and wellness programs to keep students physically fit and mentally focused.",
+    slug: "auditorium-conference-hall",
+    title: "Auditorium & Conference Hall",
+    shortDesc: "Spacious halls for assemblies, annual day functions, seminars, and guest lectures.",
+    description:
+      "Our auditorium and conference hall serve as the heart of school gatherings. These spacious, well-equipped halls host morning assemblies, annual day celebrations, cultural programs, parent-teacher meetings, seminars, and guest lectures. The acoustics, seating, and stage setup ensure that every event is a memorable experience for students and families.",
+    image: "/uploads/photo_15.jpg",
+    gallery: ["/uploads/photo_15.jpg", "/uploads/photo_01.jpg", "/uploads/photo_07.jpg"],
+    highlights: [
+      "Spacious auditorium for assemblies and cultural events",
+      "Conference hall for seminars and guest lectures",
+      "Stage, sound, and seating for large gatherings",
+      "Venue for annual day, debates, and competitions",
+    ],
+  },
+  {
+    slug: "extracurricular-activities",
+    title: "Extracurricular Activities",
+    shortDesc: "Yoga, Silambam, skating, classical dance, chess, karate, and more for all-round development.",
+    description:
+      "Beyond academics, Sree Ambaals offers a vibrant range of extracurricular activities. Students can practice yoga for focus and fitness, learn Silambam and karate for strength and discipline, enjoy skating and chess for coordination and strategy, and train in classical dance and music to express creativity. These activities build confidence, cultural pride, and well-rounded personalities.",
     image: "/uploads/photo_01.jpg",
+    gallery: ["/uploads/photo_01.jpg", "/uploads/photo_05.jpg", "/uploads/photo_06.jpg"],
+    highlights: [
+      "Yoga for physical fitness and mental focus",
+      "Silambam, karate, and skating for discipline and strength",
+      "Classical dance and music for cultural expression",
+      "Chess and other indoor games for strategic thinking",
+    ],
   },
 ] as const;
 
