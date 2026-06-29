@@ -4,6 +4,7 @@ import { BentoGrid } from "../components/BentoGrid";
 import { Features } from "../components/Features";
 import { AIRecommender } from "../components/AIRecommender";
 import { Testimonials } from "../components/Testimonials";
+import { Videos } from "../components/Videos";
 import { FAQ } from "../components/FAQ";
 import { Newsletter } from "../components/Newsletter";
 import { SITE } from "../lib/content";
@@ -21,6 +22,7 @@ export function Home() {
         <BentoGrid />
         <Features />
         <AIRecommender />
+        <Videos />
         <Testimonials />
         <FAQ />
         <Newsletter />
