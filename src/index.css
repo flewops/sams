@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Logo-matched palette: Sree Ambaals blue & orange */
+  --color-coral: #f57c00;
+  --color-coral-light: #fff3e0;
+  --color-teal: #0056b3;
+  --color-teal-light: #e6f0fa;
+  --color-cream: #fffaf5;
+  --color-school-blue: #0056b3;
+  --color-school-orange: #f57c00;
+}
+
+:root {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: #1f2937;
+  background-color: #fffaf5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.tamil {
+  font-family: 'Baloo Thambi 2', 'Noto Sans Tamil', system-ui, sans-serif;
+}
+
+/* Scribble / hand-drawn aesthetic helpers */
+.scribble-border {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+.scribble-border-sm {
+  border-radius: 30px 2px 30px 2px / 2px 30px 2px 30px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 3px solid #f57c00;
+  outline-offset: 2px;
+}
+
+/* Custom selection */
+::selection {
+  background-color: #ffcc80;
+  color: #1f2937;
+}
+
+/* Prose overrides */
+.prose h2 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  color: #1f2937;
+  font-weight: 800;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+}
