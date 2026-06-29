@@ -8,18 +8,22 @@ const VALUES = [
   {
     title: "Nurturing Every Child",
     text: "At Sree Ambaals, education begins with care. We believe every child blossoms when surrounded by patient guidance, encouraging teachers, and a supportive peer environment. Our classrooms are spaces where students feel safe to question, explore, and grow at their own pace.",
+    image: "/uploads/photo_12.jpg",
   },
   {
     title: "Excellence Rooted in Values",
     text: "Academic achievement matters, but character matters more. We strive to develop disciplined, respectful, and responsible individuals who carry Tamil culture and universal human values into everything they do.",
+    image: "/uploads/photo_07.jpg",
   },
   {
     title: "Ancient Wisdom, Modern Methods",
     text: "We honour timeless practices like yoga, discipline, and community service while embracing modern teaching tools, digital classrooms, and hands-on learning. The result is an education that is grounded yet forward-looking.",
+    image: "/uploads/photo_03.jpg",
   },
   {
     title: "In Harmony with Community",
     text: "A school is not separate from society. Through clean-up drives, environmental projects, and parent partnerships, our students learn that true education includes serving the people and world around them.",
+    image: "/uploads/photo_05.jpg",
   },
 ];
 
@@ -109,22 +113,38 @@ export function About() {
                 What we stand for
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 gap-x-12 gap-y-14">
+            <div className="space-y-20 md:space-y-28">
               {VALUES.map((value, i) => (
                 <motion.div
                   key={value.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="group"
+                  className={`grid md:grid-cols-2 gap-10 lg:gap-16 items-center ${
+                    i % 2 === 1 ? "md:grid-flow-dense" : ""
+                  }`}
                 >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-school-orange transition-colors">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {value.text}
-                  </p>
+                  <div className={i % 2 === 1 ? "md:col-start-2" : ""}>
+                    <div className="rounded-[2rem] overflow-hidden border-4 border-gray-900 shadow-[10px_10px_0px_0px_rgba(245,124,0,1)]">
+                      <img
+                        src={value.image}
+                        alt={value.title}
+                        className="w-full h-[300px] md:h-[380px] object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                  </div>
+                  <div className={i % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""}>
+                    <span className="text-school-orange font-bold text-sm uppercase tracking-wider">
+                      Value {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">
+                      {value.title}
+                    </h3>
+                    <p className="text-gray-600 text-lg leading-relaxed">
+                      {value.text}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
