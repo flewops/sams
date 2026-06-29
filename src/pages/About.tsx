@@ -1,22 +1,40 @@
 import { motion } from "framer-motion";
-import { Target, Heart, Lightbulb, Users } from "lucide-react";
 import { SEOHead } from "../components/SEOHead";
 import { PageHeader } from "../components/PageHeader";
 import { Testimonials } from "../components/Testimonials";
 import { HERO, SITE } from "../lib/content";
+
+const VALUES = [
+  {
+    title: "Nurturing Every Child",
+    text: "At Sree Ambaals, education begins with care. We believe every child blossoms when surrounded by patient guidance, encouraging teachers, and a supportive peer environment. Our classrooms are spaces where students feel safe to question, explore, and grow at their own pace.",
+  },
+  {
+    title: "Excellence Rooted in Values",
+    text: "Academic achievement matters, but character matters more. We strive to develop disciplined, respectful, and responsible individuals who carry Tamil culture and universal human values into everything they do.",
+  },
+  {
+    title: "Ancient Wisdom, Modern Methods",
+    text: "We honour timeless practices like yoga, discipline, and community service while embracing modern teaching tools, digital classrooms, and hands-on learning. The result is an education that is grounded yet forward-looking.",
+  },
+  {
+    title: "In Harmony with Community",
+    text: "A school is not separate from society. Through clean-up drives, environmental projects, and parent partnerships, our students learn that true education includes serving the people and world around them.",
+  },
+];
 
 export function About() {
   return (
     <>
       <SEOHead
         title="About Us"
-        description={`Learn about ${SITE.name}, Padalur — our mission, values, and 25+ year legacy of nurturing confident learners.`}
+        description={`Learn about ${SITE.name}, Padalur \u2014 our mission, values, and 25+ year legacy of nurturing confident learners.`}
         path="/about"
       />
       <main>
         <PageHeader
           title="A legacy of learning, values, and community"
-          subtitle="For over two decades, Sree Ambaals has been a second home for students — where academic ambition meets character, culture, and care."
+          subtitle="For over two decades, Sree Ambaals has been a second home for students \u2014 where academic ambition meets character, culture, and care."
         />
 
         <section className="py-8 bg-cream">
@@ -30,9 +48,9 @@ export function About() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -41,7 +59,7 @@ export function About() {
                 <img
                   src="/uploads/photo_15.jpg"
                   alt="Sree Ambaals school campus aerial view"
-                  className="rounded-[2rem] border-4 border-gray-900 shadow-[10px_10px_0px_0px_rgba(245,124,0,1)] w-full h-[400px] object-cover"
+                  className="rounded-[2rem] border-4 border-gray-900 shadow-[10px_10px_0px_0px_rgba(245,124,0,1)] w-full h-[420px] object-cover"
                 />
               </motion.div>
               <motion.div
@@ -49,28 +67,33 @@ export function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                  Building futures since 2001
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                  A place where children naturally blossom
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Sree Ambaals Matric HR. Sec. School, Padalur, was founded with a simple belief: every child
-                  deserves an education that strengthens the mind, shapes character, and prepares them for life.
-                  Over the years, we have grown into one of the most trusted schools in the Lalgudi Taluk region,
-                  serving thousands of families across Trichy district.
+                <p className="text-gray-600 leading-relaxed mb-5">
+                  Founded in 2001, Sree Ambaals Matric HR. Sec. School, Padalur, was built on the belief that
+                  every child deserves an education that strengthens the mind, shapes character, and prepares
+                  them for life. Over the years, we have grown into one of the most trusted schools in the
+                  Perambalur region, serving thousands of families with a warm, disciplined, and purposeful
+                  learning environment.
                 </p>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   Our students excel in board examinations while also growing through yoga, sports, arts,
                   environmental action, and community service. Backed by experienced teachers and caring
                   management, Sree Ambaals is where ambition meets values.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-wrap gap-8">
                   <div>
-                    <div className="text-3xl font-extrabold text-school-orange">25+</div>
+                    <div className="text-4xl font-extrabold text-school-orange">25+</div>
                     <div className="text-sm text-gray-500 font-medium">Years of Excellence</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-extrabold text-school-blue">3000+</div>
+                    <div className="text-4xl font-extrabold text-school-blue">3000+</div>
                     <div className="text-sm text-gray-500 font-medium">Students on Campus</div>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold text-school-orange">100%</div>
+                    <div className="text-sm text-gray-500 font-medium">Board Results Focus</div>
                   </div>
                 </div>
               </motion.div>
@@ -78,39 +101,43 @@ export function About() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-cream">
+        <section className="py-16 md:py-28 bg-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">What we stand for</h2>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-school-orange font-bold text-sm uppercase tracking-wider">Our Values</span>
+              <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900">
+                What we stand for
+              </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { icon: Target, title: "Purpose", text: "Every lesson and activity is designed to help students discover their potential and contribute to society." },
-                { icon: Heart, title: "Care", text: "We create a safe, inclusive environment where every child feels seen, supported, and encouraged." },
-                { icon: Lightbulb, title: "Innovation", text: "From smart classrooms to hands-on events, we embrace modern methods while honoring timeless values." },
-                { icon: Users, title: "Community", text: "Parents, teachers, and students work together as one community committed to excellence." },
-              ].map((value, i) => (
+            <div className="grid md:grid-cols-2 gap-x-12 gap-y-14">
+              {VALUES.map((value, i) => (
                 <motion.div
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-3xl bg-white border-2 border-gray-900 shadow-[5px_5px_0px_0px_rgba(0,86,179,1)]"
+                  className="group"
                 >
-                  <value.icon className="w-10 h-10 text-school-orange mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
-                  <p className="text-gray-600 text-sm">{value.text}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-school-orange transition-colors">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {value.text}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-14">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Our Leadership</h2>
+              <span className="text-school-blue font-bold text-sm uppercase tracking-wider">Leadership</span>
+              <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900">
+                Guided by experience and care
+              </h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {[
